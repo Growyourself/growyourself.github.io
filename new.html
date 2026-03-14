@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grow Yourself Trading</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:#0f172a;
+color:white;
+}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 10%;
+background:#020617;
+}
+
+.logo{
+font-size:24px;
+color:#22c55e;
+font-weight:bold;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+cursor:pointer;
+}
+
+nav a:hover{
+color:#22c55e;
+}
+
+.section{
+display:none;
+padding:60px 10%;
+text-align:center;
+}
+
+.active{
+display:block;
+}
+
+.card{
+background:#1e293b;
+padding:25px;
+margin:15px;
+border-radius:10px;
+display:inline-block;
+width:250px;
+}
+
+.btn{
+background:#22c55e;
+border:none;
+padding:12px 25px;
+border-radius:5px;
+cursor:pointer;
+color:white;
+}
+
+input{
+padding:10px;
+margin:10px;
+width:250px;
+border-radius:5px;
+border:none;
+}
+
+footer{
+background:#020617;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+</style>
+
+<script>
+
+function showSection(sectionId){
+
+let sections=document.querySelectorAll(".section");
+
+sections.forEach(sec=>{
+sec.classList.remove("active");
+});
+
+document.getElementById(sectionId).classList.add("active");
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">Grow Yourself</div>
+
+<nav>
+
+<a onclick="showSection('home')">Home</a> <a onclick="showSection('trading')">Trading</a> <a onclick="showSection('deposit')">Deposit</a> <a onclick="showSection('education')">Education</a> <a onclick="showSection('contact')">Contact</a> <a onclick="showSection('login')">Login</a> <a onclick="showSection('signup')">Signup</a>
+
+</nav>
+
+</header>
+
+<!-- HOME -->
+
+<section id="home" class="section active">
+
+<h1>Grow Your Money With Smart Trading</h1>
+
+<p>Welcome to Grow Yourself trading platform</p>
+
+<button class="btn" onclick="showSection('signup')">Start Trading</button>
+
+<br><br>
+
+<div class="card">
+<h3>Live Market</h3>
+<p>Track market price</p>
+</div>
+
+<div class="card">
+<h3>Secure Trading</h3>
+<p>Safe trading system</p>
+</div>
+
+<div class="card">
+<h3>Learn Trading</h3>
+<p>Trading education</p>
+</div>
+
+</section>
+
+<!-- TRADING DASHBOARD -->
+
+<section id="trading" class="section">
+
+<h1>Trading Dashboard</h1>
+
+<div class="card">
+<h3>BTC / USDT</h3>
+<p>Price: $65000</p>
+<button class="btn">Trade</button>
+</div>
+
+<div class="card">
+<h3>ETH / USDT</h3>
+<p>Price: $3500</p>
+<button class="btn">Trade</button>
+</div>
+
+<div class="card">
+<h3>Gold</h3>
+<p>Price: $2100</p>
+<button class="btn">Trade</button>
+</div>
+
+</section>
+
+<!-- DEPOSIT PAYMENT -->
+
+<section id="deposit" class="section">
+
+<h1>Deposit Money</h1>
+
+<p>Scan the QR code to send payment</p>
+
+<img src="qr.png" width="250">
+
+<p>UPI ID: yourname@upi</p>
+
+<p>After payment contact support to update your balance.</p>
+
+</section>
+
+<!-- EDUCATION -->
+
+<section id="education" class="section">
+
+<h1>Trading Education</h1>
+
+<div class="card">
+<h3>Beginner Trading</h3>
+<p>Learn basics of trading</p>
+</div>
+
+<div class="card">
+<h3>Technical Analysis</h3>
+<p>Understand charts</p>
+</div>
+
+<div class="card">
+<h3>Risk Management</h3>
+<p>Protect your capital</p>
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact" class="section">
+
+<h1>Contact Us</h1>
+
+<input type="text" placeholder="Your Name"><br> <input type="email" placeholder="Email"><br> <input type="text" placeholder="Message"><br>
+
+<button class="btn">Send Message</button>
+
+</section>
+
+<!-- LOGIN -->
+
+<section id="login" class="section">
+
+<h1>Login</h1>
+
+<input type="text" placeholder="Email"><br> <input type="password" placeholder="Password"><br>
+
+<button class="btn" onclick="showSection('trading')">Login</button>
+
+<p>Don't have account?</p>
+
+<button class="btn" onclick="showSection('signup')">Create Account</button>
+
+</section>
+
+<!-- SIGNUP -->
+
+<section id="signup" class="section">
+
+<h1>Create Account</h1>
+
+<input type="text" placeholder="Full Name"><br> <input type="email" placeholder="Email"><br> <input type="password" placeholder="Password"><br>
+
+<button class="btn" onclick="showSection('trading')">Create Account</button>
+
+</section>
+
+<footer>
+
+© 2026 Grow Yourself Trading Platform
+
+</footer>
+
+</body>
+</html>
+
+
+
+<section id="deposit" class="section">
+
+<h1>Deposit Money</h1>
+
+<p>Select amount to deposit</p>
+
+<br>
+
+<button class="btn">₹100 Deposit</button>
+
+<br><br>
+
+<button class="btn">₹500 Deposit</button>
+
+<br><br>
+
+<button class="btn">₹1000 Deposit</button>
+
+<br><br>
+
+<p>Scan QR code to complete payment</p>
+
+<img src="qr.png" width="250">
+
+<p>UPI ID: yourname@upi</p>
+
+<p>After payment send screenshot on support.</p>
+
+</section>
